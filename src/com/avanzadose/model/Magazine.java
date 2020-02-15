@@ -3,6 +3,14 @@ package com.avanzadose.model;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * *
+ * Hereda de {@link Publication}
+ *
+ * @author Fernando Ambrosio
+ * @version v0.1.0
+ * @since 15 de febrero del 2020
+ */
 public class Magazine extends Publication {
 
     private int id;
