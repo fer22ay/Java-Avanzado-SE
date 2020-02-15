@@ -1,18 +1,18 @@
 package com.avanzadose.model;
 
-/***
- * <h1>Film</h1>
+/**
+ *
+ * < h1>Film</h1>
  * Film es una clase padre abstracta
  * <p>
- * Esta clase es la clase base de la familia Films, como es abstracta
- * no pueden crearse instancias. Contiene el metodo abstracto 
- * {@code view()} que es obligatorio implementar para todo aquel que pertenezca a la familia.
- * 
+ * Esta clase es la clase base de la familia Films, como es abstracta no pueden
+ * crearse instancias. Contiene el metodo abstracto {@code view()} que es
+ * obligatorio implementar para todo aquel que pertenezca a la familia.
+ *
  * @author Fernando Ambrosio
  * @version v0.1.0
  * @since 2020
  */
-
 public abstract class Film {
 
     private String title;
@@ -88,7 +88,8 @@ public abstract class Film {
         this.viewed = viewed;
     }
 
-    /***
+    /**
+     * *
      * {@code view()} es un metodo abstracto obligatorio de implementar
      */
     public abstract void view();

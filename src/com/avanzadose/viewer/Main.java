@@ -8,15 +8,17 @@ import com.avanzadose.util.AmazonUtil;
 import java.util.ArrayList;
 import java.util.Date;
 
-
-/***
- * <h1>AmazonViewer</h1>
- * AmazonView es un programa que permite visualizar Movies, Series con sus respectivos Chapters,
- * Books y Magazines. Te permite generar reportes generales y con fecha del dia.
+/**
+ *
+ * < h1>AmazonViewer</h1>
+ * AmazonView es un programa que permite visualizar Movies, Series con sus
+ * respectivos Chapters, Books y Magazines. Te permite generar reportes
+ * generales y con fecha del dia.
  * <p>
- * Existen algunas reglas como que todos los elementos pueden ser visualizados o leidos a excepcion
- * de las Magazines, estas solo puede ser vistas a moodo de exposicion sin ser leidas.
- * 
+ * Existen algunas reglas como que todos los elementos pueden ser visualizados o
+ * leidos a excepcion de las Magazines, estas solo puede ser vistas a moodo de
+ * exposicion sin ser leidas.
+ *
  * @author Fernando Ambrosio
  * @version v0.1.0
  * @since 2020
@@ -40,6 +42,40 @@ public class Main {
             System.out.println("5. Report");
             System.out.println("6. Report Today");
             System.out.println("0. Exit");
+
+            int response = AmazonUtil.validateUserResponseMenu(0, 6);
+
+            switch (response) {
+                case 0:
+                    exit = 0;
+                    break;
+                case 1:
+                    showMovies();
+                    break;
+                case 2:
+                    showSeries();
+                    break;
+                case 3:
+                    showBooks();
+                    break;
+                case 4:
+                    showMagazines();
+                    break;
+                case 5:
+                    makeReport();
+                    exit = 1;
+                    break;
+                case 6:
+                    makeReport(new Date());
+                    exit = 1;
+                    break;
+                default:
+                    System.out.println();
+                    System.out.println("....!!Selecciona una opcion!!...");
+                    System.out.println();
+                    exit = 1;
+                    break;
+            }
         } while (exit != 0);
     }
 

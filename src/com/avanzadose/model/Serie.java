@@ -2,9 +2,10 @@ package com.avanzadose.model;
 
 import java.util.ArrayList;
 
-
-/***
+/**
+ * *
  * Hereda de {@link Film}
+ *
  * @author Fernando Ambrosio
  * @version v0.1.0
  * @since 2020
@@ -47,27 +48,27 @@ public class Serie extends Film {
     @Override
     public String toString() {
         return "\n :: SERIE ::"
-                + "\n Title: " + getTitle() + 
-                "\n Genero: " + getGenre() + 
-                "\n Year: " + getYear() +
-                "\n Creator: " + getCreator() +
-                "\n Duration: " + getDuration();
+                + "\n Title: " + getTitle()
+                + "\n Genero: " + getGenre()
+                + "\n Year: " + getYear()
+                + "\n Creator: " + getCreator()
+                + "\n Duration: " + getDuration();
     }
 
-    public static ArrayList<Serie> makeSeriesList(){
+    public static ArrayList<Serie> makeSeriesList() {
         ArrayList<Serie> series = new ArrayList<>();
-        
+
         for (int i = 0; i < 5; i++) {
-            Serie serie = new Serie("Serie: "+i, "Genero: "+i, "Creador: "+i, 1200, 5);
+            Serie serie = new Serie("Serie: " + i, "Genero: " + i, "Creador: " + i, 1200, 5);
             serie.setChapters(Chapter.makeChaptersList(serie));
             series.add(serie);
         }
-        
+
         return series;
     }
-    
-    
-    /***
+
+    /**
+     * *
      * {@inheritDoc }
      */
     @Override

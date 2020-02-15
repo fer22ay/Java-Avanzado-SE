@@ -5,7 +5,7 @@ import java.util.Date;
 
 /**
  * *
- * Herada de {@link Film} Implementa de {@link IVisualizable}
+ * Hereda de {@link Film} Implementa de {@link IVisualizable}
  *
  * @author Fernando Ambrosio
  * @version v0.1.0
