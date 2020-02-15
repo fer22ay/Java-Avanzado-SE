@@ -46,10 +46,12 @@ public class Main {
             System.out.println("6. Report Today");
             System.out.println("0. Exit");
 
+            //Leer la respuesta del usuario
             int response = AmazonUtil.validateUserResponseMenu(0, 6);
 
             switch (response) {
                 case 0:
+                    //Salir
                     exit = 0;
                     break;
                 case 1:

@@ -147,22 +147,25 @@ public class Book extends Publication implements IVisualizable {
 
         String[] authors = new String[3];
         for (int i = 0; i < 3; i++) {
-            authors[i] = "author" + i;
+            authors[i] = "author " + i;
         }
 
         ArrayList<Page> pages = new ArrayList<>();
         int pagina = 0;
         for (int i = 0; i < 3; i++) {
-            pagina = 1;
+            pagina = i+1;
             pages.add(new Book.Page(pagina, "El contenido de la pagina " + pagina));
         }
 
-        for (int i = 0; i < 5; i++) {
-            books.add(new Book("Book: " + i, new Date(), "editorial" + i, authors, pages));
+        for (int i = 0; i <= 5; i++) {
+            books.add(new Book("Book: " + i, new Date(), " editorial " + i, authors, pages));
         }
         return books;
     }
 
+    /***
+     * Class inner
+     */
     public static class Page {
 
         private int id;
