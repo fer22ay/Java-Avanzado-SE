@@ -43,7 +43,13 @@ public class Book extends Publication implements IVisualizable {
         this.isbn = isbn;
     }
 
-    public String isREaded() {
+    /**
+     * *
+     * Metodo para indicar cuando el usuario a terminado de leer el libro.
+     *
+     * @return type String, SI o NO
+     */
+    public String isReaded() {
         String leido = "";
         if (readed == true) {
             leido = "SI";
@@ -142,6 +148,11 @@ public class Book extends Publication implements IVisualizable {
         System.out.println("Por: " + getTimeReaded() + " milisegundos");
     }
 
+    /**
+     * *
+     * Metodo para leer las paginas del libro.
+     * @return ArrayList de Book
+     */
     public static ArrayList<Book> makeBookList() {
         ArrayList<Book> books = new ArrayList<>();
 
@@ -153,7 +164,7 @@ public class Book extends Publication implements IVisualizable {
         ArrayList<Page> pages = new ArrayList<>();
         int pagina = 0;
         for (int i = 0; i < 3; i++) {
-            pagina = i+1;
+            pagina = i + 1;
             pages.add(new Book.Page(pagina, "El contenido de la pagina " + pagina));
         }
 
@@ -163,7 +174,8 @@ public class Book extends Publication implements IVisualizable {
         return books;
     }
 
-    /***
+    /**
+     * *
      * Class inner
      */
     public static class Page {

@@ -186,7 +186,7 @@ public class Main {
             System.out.println();
 
             for (int i = 0; i < books.size(); i++) {
-                System.out.println(i + 1 + ". " + books.get(i).getTitle() + " Leido: " + books.get(i).isREaded());
+                System.out.println(i + 1 + ". " + books.get(i).getTitle() + " Leido: " + books.get(i).isReaded());
             }
 
             System.out.println("0. Regresar al Menu");
